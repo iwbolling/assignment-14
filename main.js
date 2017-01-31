@@ -1,3 +1,8 @@
+var forEach = function(arr, func){
+    for(var i = 0 ; i < arr.length; i++){
+        func(arr[i], i, arr)
+    }
+}
 
 document.querySelector("#inject-html button").addEventListener('click',function(){
   // TASK #1
@@ -42,7 +47,14 @@ document.querySelector("#blow-up button").addEventListener('click',function(){
 
 document.querySelector("#remove button").addEventListener('click',function(){
   // TASK #5
-  
+  var listOfUsers = document.querySelectorAll("#user-list li");
+  forEach (listOfUsers, function(listItem,index,arr) {
+    if (listItem.className.indexOf("active") >= 0 &&
+        listItem.className.indexOf("inactive") === -1) {
+    } else {
+      listItem.style.fontSize = 0;
+    }
+  })
 })
 
 
