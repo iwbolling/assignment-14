@@ -22,7 +22,7 @@ document.querySelector("#color-circle button").addEventListener('click',function
   var switchingCircle = document.querySelector("#circle-bw");
   var switchCircleStyle = window.getComputedStyle(switchingCircle);
   // console.log(currBGC.backgroundColor);
-  if (currBGC.backgroundColor === "rgb(255, 255, 255)") {
+  if (switchCircleStyle.backgroundColor === "rgb(255, 255, 255)") {
     switchingCircle.style.backgroundColor = "rgb(0, 0, 0)";
     // console.log(currBGC.backgroundColor);
   } else {
@@ -82,6 +82,7 @@ document.querySelector("#reverse-squares button").addEventListener('click',funct
 
 document.querySelector("#pig-latin button").addEventListener('click',function(){
   // TASK #7
+
 })
 
 document.querySelector("#cycle-image button").addEventListener('click',function(){
