@@ -59,8 +59,7 @@ document.querySelector("#remove button").addEventListener('click',function(){
 
 document.querySelector("#reverse-squares button").addEventListener('click',function(){
   // TASK #6
-  var colorSquares = document.querySelectorAll(".answer-box span");
-  var colorsBox = document.querySelector(".answer-box")
+  var colorSquares = document.querySelectorAll(".square");
   if (colorSquares[0].className === "square s3") {
     colorSquares[0].className = "square s2";
     colorSquares[1].className = "square s1";
@@ -82,7 +81,14 @@ document.querySelector("#reverse-squares button").addEventListener('click',funct
 
 document.querySelector("#pig-latin button").addEventListener('click',function(){
   // TASK #7
-
+  var listofTasks = document.querySelector("#tasks");
+  var allTasks = document.querySelectorAll("#tasks li");
+  forEach (allTasks, function(task,index,arr) {
+    var taskStr = task.textContent;
+    var charArr = taskStr.split("");
+    var revArr = charArr.reverse();
+    task.textContent = revArr.join("");
+  })
 })
 
 document.querySelector("#cycle-image button").addEventListener('click',function(){
